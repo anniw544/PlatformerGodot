@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxlx3fhw6djym"]
+[gd_scene load_steps=8 format=3 uid="uid://bxlx3fhw6djym"]
 
 [ext_resource type="PackedScene" uid="uid://ot5vj7ftajg" path="res://scenes/player.tscn" id="1_6y35u"]
 [ext_resource type="Texture2D" uid="uid://bb6a385qfpvwf" path="res://icon.svg" id="1_ckp6o"]
@@ -8,7 +8,12 @@
 [sub_resource type="QuadMesh" id="QuadMesh_5x872"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u15oq"]
-size = Vector2(892, 66)
+size = Vector2(1654.5, 66)
+
+[sub_resource type="QuadMesh" id="QuadMesh_vxv8u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46h26"]
+size = Vector2(689.5, 231)
 
 [node name="World" type="Node2D"]
 
@@ -25,10 +30,23 @@ position = Vector2(547, 373)
 collision_layer = 3
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Platform"]
-position = Vector2(417.5, 535.5)
-scale = Vector2(891, 65)
+position = Vector2(799, 535.5)
+scale = Vector2(1654, 65)
 mesh = SubResource("QuadMesh_5x872")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
-position = Vector2(417.5, 536)
+position = Vector2(798.75, 536)
 shape = SubResource("RectangleShape2D_u15oq")
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(974, -188)
+collision_layer = 3
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform2"]
+position = Vector2(315.5, 616.5)
+scale = Vector2(687, 227)
+mesh = SubResource("QuadMesh_vxv8u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+position = Vector2(316.25, 618.5)
+shape = SubResource("RectangleShape2D_46h26")
