@@ -25,6 +25,8 @@ texture = ExtResource("1_ckp6o")
 
 [node name="Player" parent="." instance=ExtResource("1_6y35u")]
 position = Vector2(547, 373)
+v_cap = 3000
+dash_str = 3000
 
 [node name="Platform" type="StaticBody2D" parent="."]
 collision_layer = 3
