@@ -18,13 +18,14 @@ size = Vector2(689.5, 231)
 [node name="World" type="Node2D"]
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2(562, 204)
-scale = Vector2(1246.5, 514.5)
+position = Vector2(-331, 730)
+scale = Vector2(3140.25, 2405.25)
 mesh = SubResource("QuadMesh_uf5f2")
 texture = ExtResource("1_ckp6o")
 
 [node name="Player" parent="." instance=ExtResource("1_6y35u")]
 position = Vector2(547, 373)
+drag = 300
 v_cap = 3000
 dash_str = 3000
 

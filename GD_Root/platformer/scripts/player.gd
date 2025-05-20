@@ -13,7 +13,6 @@ var freeze_frame = 0
 var grav_disable = 0
 
 
-
 func _physics_process(delta):
 	#Vertical gravity
 	if grav_disable == 0:	
@@ -55,14 +54,14 @@ func _physics_process(delta):
 			await get_tree().create_timer(.1).timeout
 			grav_disable = 0
 			
-			
-	
-	
+		
 	#Horizontal movement
 	if phy_disable == 0:
 		var horizontal_direction = Input.get_axis("move_left", "move_right")
 		velocity.x = speed * horizontal_direction
-		
+	elif phy_disable == 1:
+		var horizontal_direction = Input.get_axis("move_left", "move_right")
+		velocity.x += speed * horizontal_direction
 		
 	if freeze_frame == 0:
 		move_and_slide()
